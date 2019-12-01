@@ -1,16 +1,16 @@
 <?php
-
+include_once ROOT . '/models/News.php';
 class NewsController
 {
     public function actionIndex()
     {
-        echo "Вывод всех новостей";
+        $newsList = News::newsList();
         return true;
     }
 
     public function actionView($id)
     {
-        echo "Вывод новости под номером $id";
+        $newsItem = News::newsItem($id);
         return true;
     }
 }
