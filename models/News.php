@@ -7,7 +7,7 @@ class News
     {
         $db = DB::getConnect();
         $query = $db->query("SELECT title, short_content, date,
-         author, preview content FROM news");
+         author, preview, content FROM news");
         return $newsList = $query->fetchAll(PDO::FETCH_ASSOC);
     }
 
@@ -16,7 +16,7 @@ class News
     {
         $db = DB::getConnect();
         $query = $db->prepare("SELECT title, short_content, date,
-         author, preview content FROM news
+         author, preview, content FROM news
          WHERE id = :id ORDER BY date DESC
         ");
         $query->bindParam(':id', $id);

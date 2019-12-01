@@ -23,6 +23,11 @@ class Router
     public function run()
     {
         $uri = $this->getURI();
+        if (empty($uri)) {
+            include_once ROOT . '/controllers/NewsController.php';
+            $mainPage = new NewsController;
+            $mainPage->actionIndex();
+        }
         foreach ($this->routes as $uriPattern => $path) {
             if (preg_match("~$uriPattern~", $uri)) {
                 $fullPath = preg_replace("~$uriPattern~", $path, $uri);

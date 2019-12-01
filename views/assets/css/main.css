@@ -2640,20 +2640,6 @@
 			overflow: hidden;
 		}
 
-			.post > a.image.featured img {
-				-moz-transition: -moz-transform 0.2s ease-out;
-				-webkit-transition: -webkit-transform 0.2s ease-out;
-				-ms-transition: -ms-transform 0.2s ease-out;
-				transition: transform 0.2s ease-out;
-			}
-
-			.post > a.image.featured:hover img {
-				-moz-transform: scale(1.05);
-				-webkit-transform: scale(1.05);
-				-ms-transform: scale(1.05);
-				transform: scale(1.05);
-			}
-
 		.post > footer {
 			display: -moz-flex;
 			display: -webkit-flex;
